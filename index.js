@@ -17,11 +17,11 @@ app.get('/', (req, res) => {
     res.send("HELLO WORLD");
 });
 
-// //import employee route.
-// const employeeRoutes = require('./src/routes/employee.route');
+//import employee route.
+const studentRoutes = require('./src/routes/student.route');
 
-// //create employee route.
-// app.use("/api/v1/employee", employeeRoutes);
+//create employee route.
+app.use.require("/api/v1/students", studentRoutes);
 
 //Port Listener.
 app.listen(port, () => {
