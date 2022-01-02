@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 const studentRoutes = require('./src/routes/student.route');
 
 //create employee route.
-app.use.require("/api/v1/students", studentRoutes);
+app.use("/api/v1/students", studentRoutes);
 
 //Port Listener.
 app.listen(port, () => {

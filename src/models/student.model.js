@@ -1,6 +1,6 @@
 var dbConn = require("../../config/db.config");
 
-var Students = function(students) {
+var Students = function(Students) {
     this.FirstName = Students.FirstName;
     this.LastName = Students.LastName;
     this.Email = Students.Email;
@@ -38,7 +38,7 @@ Students.getStudentByPhone = (Phone, result) => {
 
 //Create new Student.
 Students.createStudent = (studentReqData, result) => {
-    dbConn.query("INSERT INTO students SET ?", studentReqData, (res, res) => {
+    dbConn.query("INSERT INTO students SET ?", studentReqData, (req, res) => {
         try {
             console.log("Student Created Successfully", res);
             result(null, res);
